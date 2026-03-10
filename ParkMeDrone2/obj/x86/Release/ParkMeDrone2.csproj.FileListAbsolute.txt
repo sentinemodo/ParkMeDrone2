@@ -1,0 +1,2 @@
+C:\Users\akacz\Documents\Cursor\ParkMeDrone\ParkMeDrone2\ParkMeDrone2\obj\x86\Release\ParkMeDrone2.csproj.AssemblyReference.cache
+C:\Users\akacz\Documents\Cursor\ParkMeDrone\ParkMeDrone2\ParkMeDrone2\obj\x86\Release\ParkMeDrone2.csproj.CoreCompileInputs.cache

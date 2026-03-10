@@ -1,0 +1,2 @@
+MainPackage=C:\Users\akacz\Documents\Cursor\ParkMeDrone\ParkMeDrone2\ParkMeDrone2\bin\x64\Debug\ParkMeDrone2_1.0.0.0_x64_Debug.msix
+SymbolPackage=C:\Users\akacz\Documents\Cursor\ParkMeDrone\ParkMeDrone2\ParkMeDrone2\obj\x64\Debug\Symbols\ParkMeDrone2_1.0.0.0_x64_Debug.appxsym

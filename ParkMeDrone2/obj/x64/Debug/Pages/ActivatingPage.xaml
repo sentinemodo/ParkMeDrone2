@@ -1,0 +1,25 @@
+﻿<Page
+    x:Class="ParkMeDrone2.Pages.ActivatingPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ParkMeDrone2.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Padding="24">
+        <StackPanel>
+            <TextBlock Text="DJI Windows SDK activation" FontSize="28" FontWeight="SemiBold" Margin="0,0,0,16"/>
+            <TextBlock Text="Activate the SDK with your DJI App Key before using the drone. Get the key from the DJI Developer portal." TextWrapping="Wrap" Margin="0,0,0,24"/>
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,8">
+                <TextBlock Text="State: " VerticalAlignment="Center"/>
+                <TextBlock x:ConnectionId='5' x:Name="ActivateStateText" Text="Not activated." VerticalAlignment="Center" FontWeight="SemiBold"/>
+            </StackPanel>
+            <TextBlock Text="App Key:" Margin="0,8,0,4"/>
+            <TextBox x:ConnectionId='2' x:Name="AppKeyBox" Width="400" HorizontalAlignment="Left" PlaceholderText="Paste your DJI App Key here"/>
+            <Button x:ConnectionId='3' Content="Activate"                              Margin="0,16,0,0" HorizontalAlignment="Left"/>
+            <TextBlock x:ConnectionId='4' x:Name="ActivationInfo" Text="" Margin="0,16,0,0" TextWrapping="Wrap" MaxHeight="120"/>
+        </StackPanel>
+    </Grid>
+</Page>
+

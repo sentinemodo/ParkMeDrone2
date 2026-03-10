@@ -1,0 +1,57 @@
+﻿<Page
+    x:Class="ParkMeDrone2.Pages.FlightPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ParkMeDrone2.Pages"
+    xmlns:models="using:ParkMeDrone2.Models"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- HUD -->
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Padding="16" Background="#CC000000">
+            <TextBlock x:ConnectionId='11' x:Name="ConnectionText" Text="Disconnected" Foreground="White" Margin="0,0,24,0"/>
+            <TextBlock x:ConnectionId='12' x:Name="AltitudeText" Text="Alt: -- m" Foreground="White" Margin="0,0,24,0"/>
+            <TextBlock x:ConnectionId='13' x:Name="BatteryText" Text="Battery: --%" Foreground="White" Margin="0,0,24,0"/>
+            <TextBlock x:ConnectionId='14' x:Name="GpsText" Text="GPS: --" Foreground="White"/>
+        </StackPanel>
+
+        <!-- Video + tap overlay -->
+        <Grid Grid.Row="1" Margin="8">
+            <Border x:ConnectionId='10' Background="Black"                          >
+                <TextBlock Text="Video preview (tap to mark parking slot)" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Gray"/>
+            </Border>
+        </Grid>
+
+        <!-- Controls -->
+        <Grid Grid.Row="2" Padding="16" Background="#EEEEEE">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <ListView x:ConnectionId='2' x:Name="MarkersList" HorizontalAlignment="Stretch" SelectionMode="None">
+                <ListView.ItemTemplate>
+                    <DataTemplate                                      >
+                        <StackPanel x:ConnectionId='7' Orientation="Horizontal" Padding="8">
+                            <TextBlock x:ConnectionId='8'                       FontWeight="SemiBold" Margin="0,0,8,0"/>
+                            <TextBlock x:ConnectionId='9'                                  Foreground="Gray"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <StackPanel Grid.Column="1" Orientation="Vertical" Margin="24,0,0,0">
+                <Button x:ConnectionId='3' x:Name="TakeOffButton" Content="Take off"                             Margin="0,0,0,8"/>
+                <Button x:ConnectionId='4' x:Name="LandButton" Content="Land"                          Margin="0,0,0,8"/>
+                <Button x:ConnectionId='5' x:Name="RthButton" Content="RTH"                        />
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Page>
+
