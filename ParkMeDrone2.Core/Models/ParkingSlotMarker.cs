@@ -14,5 +14,10 @@ namespace ParkMeDrone2.Models
         public string Label { get; set; } = "Free slot";
 
         public string CreatedAtDisplay => CreatedAt.LocalDateTime.ToString("g");
+
+        /// <summary>
+        /// True when RelativeX and RelativeY are in [0, 1] (normalized coordinates).
+        /// </summary>
+        public bool IsValid => RelativeX >= 0 && RelativeX <= 1 && RelativeY >= 0 && RelativeY <= 1;
     }
 }

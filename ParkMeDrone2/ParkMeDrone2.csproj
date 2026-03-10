@@ -83,7 +83,6 @@
     <Compile Include="Pages\FlightPage.xaml.cs">
       <DependentUpon>FlightPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Models\ParkingSlotMarker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -158,6 +157,9 @@
     <PackageReference Include="Microsoft.UI.Xaml">
       <Version>2.8.7</Version>
     </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\ParkMeDrone2.Core\ParkMeDrone2.Core.csproj" />
   </ItemGroup>
   <ItemGroup Condition="'$(Platform)'=='x64'">
     <Reference Include="DJIWindowsSDK">
